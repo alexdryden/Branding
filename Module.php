@@ -2,6 +2,7 @@
 
 use Omeka\Module\AbstractModule;
 use Zend\EventManager\Event;
+use Zend\EventManager\SharedEventManagerInterface;
 
 class Module extends AbstractModule
 {
@@ -28,6 +29,15 @@ class Module extends AbstractModule
 
 
 
+    }
+
+    public function attachListeners(SharedEventManagerInterface $sharedEventManager)
+    {
+        $sharedEventManager->attach(
+          '*',
+          'view.layout',
+          [$this, 'addAsset']
+        );
     }
 
 
