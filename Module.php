@@ -26,7 +26,8 @@ class Module extends AbstractModule
             $view = $event->getTarget();
 
             $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
-            echo $view->partial('common/footer');
+            $view->headScript()->appendFile($view->assetUrl('js/branding.js', 'Branding'));
+
 
 
         }
