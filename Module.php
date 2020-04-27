@@ -1,4 +1,5 @@
 <?php
+namespace Branding;
 
 use Omeka\Module\AbstractModule;
 use Zend\EventManager\Event;

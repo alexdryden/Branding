@@ -1,4 +1,5 @@
 <?php
+namespace Branding;
 
 return [
 'view_manager' => [
