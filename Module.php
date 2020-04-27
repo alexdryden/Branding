@@ -25,7 +25,8 @@ class Module extends AbstractModule
         if ($this->getServiceLocator()->get('Omeka\Status')->isSiteRequest()) {
             $view = $event->getTarget();
 
-            echo '<style> #content {min-height: 50vh;} </style>';
+            $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
+
         }
 
 
