@@ -7,7 +7,11 @@
     float: left;
     width: 25%;
 }
-
+@media screen and (max-width: 800px) {
+    .column {
+        width: 100%;
+    }
+}
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -67,6 +71,6 @@
 
 .footer-library p{
     font-weight: bold;
-    color: #FFFFFF;
+    /*color: #FFFFFF;*/
 
 }
