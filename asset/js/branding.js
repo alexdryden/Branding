@@ -62,8 +62,8 @@ window.onload = function () {
     div.innerHTML = footer_html;
     let body = document.getElementsByTagName("body")[0];
     body.insertAdjacentElement("afterend", div);
-    let footer = document.getElementsByTagName("footer")[0];
-    footer.remove();
+    // let footer = document.getElementsByTagName("footer")[0];
+    // footer.remove();
 
 
 };
