@@ -1,3 +1,6 @@
+
+<script type="text/javascript">
+    footer_html = `
 <div class="footer-library container">
                                 <div class="row">
                                                         <div class="column footer-library_right">
@@ -51,4 +54,19 @@
                                                         </div>
                                 </div>
                         </div>
+`;
+    </script>
+<script>
 
+
+
+    window.onload = function () {
+        let div  = document.createElement('div');
+        div.innerHTML = footer_html;
+        let body = document.getElementsByTagName("body")[0];
+        body.insertAdjacentElement("afterend", div);
+
+
+    };
+
+</script>
