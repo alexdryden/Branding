@@ -9,6 +9,30 @@
     margin-right: -10pt;
     margin-left: -10pt;
 }
+.footer-library_i-mark img {
+    background-color: transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 200px;
+}
+.footer-library_copyright {
+    font-size: 11px;
+    margin-bottom: 15px;
+    align-self: center;
+    float: inside;
+}
+.footer-library_copyright img {
+    max-height: 30px;
+
+}
+
+
+.text-center {
+    text-align: center;
+}
+
 @media screen and (max-width: 800px) {
     .column {
         width: 100%;
