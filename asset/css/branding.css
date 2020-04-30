@@ -82,3 +82,12 @@
     padding-top: 5px;
     padding-left: 10px;"
 }
+
+.iopn_header_omekas_s {
+    background-color: #192947;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2))
+}
