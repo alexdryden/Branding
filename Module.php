@@ -33,6 +33,10 @@ class Module extends AbstractModule
         } else {
              $view = $event->getTarget();
             echo $view->partial('common/header');
+
+            $view->headScript()->prependFile($view->assetUrl('js/admin_header.js', 'Branding'));
+            $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
+
         }
 
 
