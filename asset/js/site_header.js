@@ -33,6 +33,7 @@ window.addEventListener("load", function () {
     let iopnImg = document.createElement('img');
     iopnImg.setAttribute("src", brandingLogoIopnScr);
     iopnImg.className = 'iopn_img';
+    iopnImg.setAttribute("alt", "Illinois Open Publishing Network");
 
     brandingDiv.appendChild(libraryMap);
     brandingDiv.appendChild(libraryImg);
@@ -49,3 +50,15 @@ window.addEventListener("load", function () {
 
 
 }, false);
+
+
+// <div  class="iopn_header_common iopn_header_omekas_s">
+//     <img usemap="#lib-shared-header-wordmark-online__map__small" src="<?php echo $this->assetUrl('img/library.png') ?>"></img>
+//     <map name="lib-shared-header-wordmark-online__map__small">
+//     <area shape="rect" coords="0,0,15,20" href="https://illinois.edu" alt="Block I">
+//     <area shape="rect" coords="25,0,200,20" href="https://www.library.illinois.edu" alt="Illinois Library">
+//     </map>
+//     <a id="iopn_mark" href="https://iopn.library.illinois.edu">
+//     <img src="<?php echo $this->assetUrl('img/iopn.png') ?>" alt="Illinois Open Publishing Network">
+//     </a>
+//     </div>
