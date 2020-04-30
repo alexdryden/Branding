@@ -70,6 +70,8 @@ window.addEventListener("load", function () {
 
     let iMarkImg = document.getElementById("i-mark");
     iMarkImg.setAttribute("src", iMarkSrc);
+    iMarkImg.setAttribute("alt", "Block I");
+    iMarkImg.setAttribute("title", "University of Illinois");
 
     let ccImage = document.getElementById("cc_image");
     ccImage.setAttribute("src", ccImageSrc);

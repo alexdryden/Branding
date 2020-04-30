@@ -11,11 +11,14 @@ window.addEventListener("load", function () {
     firstArea.setAttribute("coords", "0,0,15,20");
     firstArea.setAttribute("href", "https://illinois.edu");
     firstArea.setAttribute("alt", "Block I");
+    firstArea.setAttribute("title", "University of Illinois");
+
 
     secondArea.setAttribute("shape", "rect");
     secondArea.setAttribute("coords", "25,0,200,20");
     secondArea.setAttribute("href", "https://www.library.illinois.edu");
     secondArea.setAttribute("alt", "University Library");
+    secondArea.setAttribute("title", "University Library");
 
     let libraryMap = document.createElement("map");
     libraryMap.appendChild(firstArea);
