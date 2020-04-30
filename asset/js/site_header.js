@@ -30,14 +30,10 @@ window.addEventListener("load", function () {
     brandingDiv.id = "branding";
 
 
-    let iopnImg = document.createElement('img');
-    iopnImg.setAttribute("src", brandingLogoIopnScr);
-    iopnImg.className = 'iopn_img';
-    iopnImg.setAttribute("alt", "Illinois Open Publishing Network");
+
 
     brandingDiv.appendChild(libraryMap);
     brandingDiv.appendChild(libraryImg);
-    brandingDiv.appendChild(iopnImg);
 
     let body = document.getElementsByTagName('body')[0];
 
