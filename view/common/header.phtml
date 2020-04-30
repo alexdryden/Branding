@@ -1,9 +1,14 @@
 <?php
-$src = $this->assetUrl('img/library_header_image.png', 'Branding');
+$librarySrc = $this->assetUrl('img/library_header_image.png', 'Branding');
+$iopnSrc = $this->assetUrl('img/iopn_white_comp_trans.png', 'Branding');
 ?>
 
 <script>
-    brandingLogoSrc = "<?php echo $src;  ?>";
+    brandingLogoSrc = "<?php echo $librarySrc;  ?>";
+    brandingLogoIopnScr = "<?php echo $iopnSrc;  ?>";
     brandingLogoHref = "https://library.illinois.edu";
+    brandingLogoIopnHref = "https://iopn.library.illinois.edu";
     brandingLogoAlt = "University Library Logo";
+    brandingLogoIopnAlt = "University Library Logo";
+
 </script>
