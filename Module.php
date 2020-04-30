@@ -21,17 +21,22 @@ class Module extends AbstractModule
     }
 
     public function addAsset(Event $event){
+        $view = $event->getTarget();
+        $view->headScript()->appendFile($view->assetUrl('js/branding.js', 'Branding'));
+
 
         if ($this->getServiceLocator()->get('Omeka\Status')->isSiteRequest()) {
-            $view = $event->getTarget();
 
             $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
+
             $view->headScript()->appendFile($view->assetUrl('js/site_footer.js', 'Branding'));
+            $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
+            echo $view->partial('common/header');
+
 
 
 
         } else {
-             $view = $event->getTarget();
             echo $view->partial('common/header');
 
             $view->headScript()->prependFile($view->assetUrl('js/admin_header.js', 'Branding'));
