@@ -30,7 +30,13 @@ class Module extends AbstractModule
 
 
 
+        } else {
+             $view = $event->getTarget();
+            echo $view->partial('common/header');
         }
+
+
+
 
 
 
