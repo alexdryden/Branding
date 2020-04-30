@@ -5,7 +5,9 @@
 
 .column {
     float: left;
-    width: 25%;
+    width: 33%;
+    margin-right: -10pt;
+    margin-left: -10pt;
 }
 @media screen and (max-width: 800px) {
     .column {

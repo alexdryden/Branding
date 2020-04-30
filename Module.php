@@ -32,6 +32,7 @@ class Module extends AbstractModule
             $view->headScript()->appendFile($view->assetUrl('js/site_footer.js', 'Branding'));
             $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
             echo $view->partial('common/header');
+            echo $view->partial('common/footer');
 
 
 
