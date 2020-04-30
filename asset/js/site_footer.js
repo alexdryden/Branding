@@ -33,7 +33,7 @@ footer_html = `
         </div>
 
         <div class="column footer-library_right">
-            <nav>
+            <div>
                 <ul>
                     <li>
                         <a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy Policy</a>
@@ -48,7 +48,7 @@ footer_html = `
                     </li>
 
                 </ul>
-            </nav>
+            </div>
 
         </div>
 </footer>
