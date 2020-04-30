@@ -74,3 +74,11 @@
     /*color: #FFFFFF;*/
 
 }
+
+.admin_header {
+    margin-left: -10pt;
+    width: 100vw;
+    background-color: #192947;
+    padding-top: 5px;
+    padding-left: 10px;"
+}
