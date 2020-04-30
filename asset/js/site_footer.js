@@ -75,13 +75,16 @@ window.addEventListener("load", function () {
 
     let ccImage = document.getElementById("cc_image");
     ccImage.setAttribute("src", ccImageSrc);
+    ccImage.setAttribute("title", "Creative Commons License: BY NC 4.0");
 
     let byImage = document.getElementById("by_image");
     byImage.setAttribute("src", byImageSrc);
+    byImage.setAttribute("title", "Creative Commons License: BY NC 4.0");
 
 
     let ncImage = document.getElementById("nc_image");
     ncImage.setAttribute("src", ncImageSrc);},false);
+    ncImage.setAttribute("title", "Creative Commons License: BY NC 4.0");
 
     // let footer = document.getElementsByTagName("footer")[0];
     // footer.remove();
