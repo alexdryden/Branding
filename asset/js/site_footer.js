@@ -57,14 +57,13 @@ footer_html = `
 
 
 
-window.onload = function () {
+window.addEventListener("load", function () {
     let div  = document.createElement('div');
     div.innerHTML = footer_html;
     let body = document.getElementsByTagName("body")[0];
-    body.insertAdjacentElement("afterend", div);
+    body.insertAdjacentElement("afterend", div);}, false );
+
+
     // let footer = document.getElementsByTagName("footer")[0];
     // footer.remove();
-
-
-};
 
