@@ -6,8 +6,7 @@
 .column {
     float: left;
     width: 33%;
-    margin-right: -10pt;
-    margin-left: -10pt;
+
 }
 .footer-library_i-mark img {
     background-color: transparent;
@@ -102,11 +101,9 @@
 }
 
 .admin_header {
-    margin-left: -10pt;
     width: 100vw;
     background-color: #192947;
     padding-top: 5px;
-    padding-left: 10px;"
 }
 
 .iopn_header_omekas_s {
