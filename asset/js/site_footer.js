@@ -83,8 +83,9 @@ window.addEventListener("load", function () {
 
 
     let ncImage = document.getElementById("nc_image");
-    ncImage.setAttribute("src", ncImageSrc);},false);
+    ncImage.setAttribute("src", ncImageSrc);
     ncImage.setAttribute("title", "Creative Commons License: BY NC 4.0");
+    },false);
 
     // let footer = document.getElementsByTagName("footer")[0];
     // footer.remove();
