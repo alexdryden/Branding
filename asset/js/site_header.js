@@ -27,12 +27,25 @@ window.addEventListener("load", function () {
 
     let brandingDiv = document.createElement('div');
     brandingDiv.className = "iopn_header_omekas_s";
+    brandingDiv.id = "branding";
+
+
+    let iopnImg = document.createElement('img');
+    iopnImg.setAttribute("src", brandingLogoIopnScr);
+    iopnImg.className = 'iopn_img';
 
     brandingDiv.appendChild(libraryMap);
     brandingDiv.appendChild(libraryImg);
+    brandingDiv.appendChild(iopnImg);
 
     let body = document.getElementsByTagName('body')[0];
+
     body.insertBefore(brandingDiv, body.childNodes[0]);
+
+
+
+
+
 
 
 }, false);
