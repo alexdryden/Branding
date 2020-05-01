@@ -20,7 +20,7 @@ footer_html = `
                                                                 </p><div>
                                                                         <ul>
                                                                                 <li><a href="https://iopn.library.illinois.edu/publishing-without-walls">About PWW</a></li>
-                                                                                <li><a href="https://iopn.library.illinois.edu/books/pww/catalog">About PWW</a></li>
+                                                                                <li><a href="https://iopn.library.illinois.edu/books/pww/about">About PWW</a></li>
                                                                                 <li><a href="https://iopn.library.illinois.edu/books/pww/catalog">PWW Catalog</a></li>
                                                                                 <li><a href="https://pww.afro.illinois.edu">AFRO-PWW Project</a></li>
 

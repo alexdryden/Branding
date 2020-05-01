@@ -24,6 +24,7 @@ window.addEventListener("load", function () {
     let libraryImg = document.createElement('img');
     libraryImg.setAttribute("usemap", "#lib-shared-header-wordmark-online__map__small");
     libraryImg.setAttribute("src", brandingLogoSrc);
+    libraryImg.setAttribute("alt", "University of Illinois Library")
 
     let brandingDiv = document.createElement('div');
     brandingDiv.className = "iopn_header_omekas_s";
