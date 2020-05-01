@@ -10,7 +10,7 @@ footer_html = `
 
         <div class="column ">
             <div class="footer-library_i-mark">
-                <img id="i-mark" usemap="#lib-shared-footer-wordmark-online__map__small" src="">
+                <img id="i-mark" usemap="#lib-shared-footer-wordmark-online__map__small" src="" alt="University of Illinois Library">
 
                 <map name="lib-shared-footer-wordmark-online__map__small">
                     <area shape="rect" coords="0,0,200,40" href="https://illinois.edu" alt="Block I">
