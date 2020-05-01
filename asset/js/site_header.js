@@ -20,6 +20,7 @@ window.addEventListener("load", function () {
     let libraryMap = document.createElement("map");
     libraryMap.appendChild(firstArea);
     libraryMap.appendChild(secondArea);
+    libraryMap.setAttribute("id", "lib-shared-header-wordmark-online__map__small")
 
     let libraryImg = document.createElement('img');
     libraryImg.setAttribute("usemap", "#lib-shared-header-wordmark-online__map__small");
@@ -36,9 +37,13 @@ window.addEventListener("load", function () {
     iopnImg.className = 'iopn_img';
     iopnImg.setAttribute("alt", "Illinois Open Publishing Network");
 
+    let iopnAnchor = document.createElement("a");
+    iopnAnchor.setAttribute("href", "http://iopn.library.illinois.edu");
+    iopnAnchor.appendChild(iopnImg);
+
     brandingDiv.appendChild(libraryMap);
     brandingDiv.appendChild(libraryImg);
-    brandingDiv.appendChild(iopnImg);
+    brandingDiv.appendChild(iopnAnchor);
 
     let body = document.getElementsByTagName('body')[0];
 
