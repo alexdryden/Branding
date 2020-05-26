@@ -27,11 +27,20 @@ class Module extends AbstractModule
 
         if ($this->getServiceLocator()->get('Omeka\Status')->isSiteRequest()) {
 
+
+
+            $librarySrc = $view->assetUrl('img/library_header_image.png', 'Branding');
+            $iopnSrc = $view->assetUrl('img/iopn_white_comp_trans.png', 'Branding');
+
+            $view->headScript()->captureStart() ?>
+            let brandingLogoSrc = "<?php echo $librarySrc;  ?>";
+            let brandingLogoIopnScr = "<?php echo $iopnSrc;  ?>";
+            <?php $view->headScript()->captureEnd();
+
             $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
 
             $view->headScript()->appendFile($view->assetUrl('js/site_footer.js', 'Branding'));
             $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
-            echo $view->partial('common/header');
 
 
 

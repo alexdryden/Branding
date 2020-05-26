@@ -2,6 +2,11 @@
 window.addEventListener("load", function () {
 
 
+    let brandingLogoHref = "https://library.illinois.edu";
+    let brandingLogoIopnHref = "https://iopn.library.illinois.edu";
+    let brandingLogoAlt = "University Library Logo";
+    let brandingLogoIopnAlt = "University Library Logo";
+
 
 
     let firstArea = document.createElement("area");
