@@ -29,7 +29,7 @@ footer_html = `
 
 
                                                         </div>
-                                                        <div class="column hidden-sm hidden-xs footer-library_right">
+                                                        <div class="column footer-library_right">
                                                                 <p>WINDSOR &amp; DOWNS</p>
                                                                 <div>
                                                                         <ul>
