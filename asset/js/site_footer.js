@@ -1,5 +1,5 @@
 footer_html = `
-<div class="footer-library container">
+<div class="footer-library">
     <div class="row">
         <div class="column footer-library_left" >
             <div>Main Library Information Desk</div>
