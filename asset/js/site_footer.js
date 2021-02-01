@@ -64,7 +64,7 @@ window.addEventListener("load", function () {
     let div  = document.createElement('div');
     div.innerHTML = footer_html;
     let body = document.getElementsByTagName("body")[0];
-    body.insertAdjacentElement("afterend", div);}, false );
+    body.insertAdjacentElement("beforeend", div);}, false );
 
 window.addEventListener("load", function () {
 
