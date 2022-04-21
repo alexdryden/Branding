@@ -28,7 +28,6 @@ class Module extends AbstractModule
         if ($this->getServiceLocator()->get('Omeka\Status')->isSiteRequest()) {
 
             $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
-
             $view->headScript()->appendFile($view->assetUrl('js/site_footer.js', 'Branding'));
             $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
             echo $view->partial('common/header');
@@ -44,12 +43,6 @@ class Module extends AbstractModule
             $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
 
         }
-
-
-
-
-
-
     }
 
     public function attachListeners(SharedEventManagerInterface $sharedEventManager)

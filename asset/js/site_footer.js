@@ -19,14 +19,7 @@ footer_html = `
 
 
             </div>
-            <div class="footer-library_copyright text-center" role="img" aria-label="Creative Commons License: BY NC 4.0">
-                <img id="cc_image" src="">
-                <img id="by_image" src="">
-                <img id="nc_image" src="">
-
-
-
-
+            <div class="footer-library_copyright text-center">
 
             </div>
 
@@ -73,18 +66,6 @@ window.addEventListener("load", function () {
     iMarkImg.setAttribute("alt", "Block I");
     iMarkImg.setAttribute("title", "University of Illinois");
 
-    let ccImage = document.getElementById("cc_image");
-    ccImage.setAttribute("src", ccImageSrc);
-    ccImage.setAttribute("title", "Creative Commons License: BY NC 4.0");
-
-    let byImage = document.getElementById("by_image");
-    byImage.setAttribute("src", byImageSrc);
-    byImage.setAttribute("title", "Creative Commons License: BY NC 4.0");
-
-
-    let ncImage = document.getElementById("nc_image");
-    ncImage.setAttribute("src", ncImageSrc);
-    ncImage.setAttribute("title", "Creative Commons License: BY NC 4.0");
     },false);
 
     // let footer = document.getElementsByTagName("footer")[0];
