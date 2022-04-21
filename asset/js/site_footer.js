@@ -20,7 +20,7 @@ footer_html = `
 
             </div>
             <div class="footer-library_copyright text-center">
-
+                <a href="https://www.library.illinois.edu/geninfo/free-and-open-use-of-online-public-domain-reproductions-metadata-and-digitization-requests/">Library Policy on Free and Open Use of Online Public Domain Reproductions</a>
             </div>
 
         </div>
