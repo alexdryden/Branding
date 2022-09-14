@@ -22,6 +22,7 @@ class Module extends AbstractModule
     public function addAsset(Event $event)
     {
         $view = $event->getTarget();
+        $view->headLink(['rel' => 'icon', 'href'=>$view->assetUrl('img/favicon.ico', 'Branding')]);
         $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
         $view->headMeta()->appendName('asset:library_header_image', $view->assetUrl('img/library_header_image.png', 'Branding'));
         $view->headMeta()->appendName('asset:iopn_white_comp_trans', $view->assetUrl('img/iopn_white_comp_trans.png', 'Branding'));
