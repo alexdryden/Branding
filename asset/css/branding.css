@@ -101,6 +101,12 @@ div.footer-library a:visited, div.footer-library a {
 
 .admin_header {
     background-color: #192947;
+    margin-bottom: -.5rem;
+}
+
+.admin_header div {
+    margin-bottom: .5rem;
+
 }
 
 .iopn_header_omekas_s {
