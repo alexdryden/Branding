@@ -9,7 +9,7 @@ let header_html = `
             <area shape="rect" coords="0,0,15,20" href="https://illinois.edu" alt="Block I">
             <area shape="rect" coords="25,0,200,20" href="https://www.library.illinois.edu" alt="University Library">
         </map>
-        <img usemap="#lib-shared-header-wordmark-online__map__small" src="`+library_header_logo+`" alt="University of Illinois Library">
+        <img usemap="#lib-shared-header-wordmark-online__map__small" src="`+library_header_logo+`" alt="University of Illinois Library" style="margin-left: 2px;">
     </div>
     <div>
         <a href="http://iopn.library.illinois.edu">
