@@ -57,5 +57,5 @@ let footer_html = `
 `;
 
 $(document).ready(function () {
-    $( footer_html ).insertAfter( "footer:first" );
+    $('body').append(footer_html)
 });

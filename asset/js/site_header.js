@@ -14,5 +14,5 @@ let header_html = `
 
 $(document).ready(function () {
     //should be the skip nav link, but they aren't named constantly on front and back ends to target directly
-    $( header_html ).insertAfter( "a:first" );
+    $( header_html ).insertAfter( "a[href='#content']" );
 });
