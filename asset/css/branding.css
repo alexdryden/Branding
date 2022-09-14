@@ -5,8 +5,32 @@
 
 .column {
     float: left;
-    width: 25%;
+    width: 33%;
+
 }
+.footer-library_i-mark img {
+    background-color: transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 200px;
+}
+.footer-library_copyright {
+    margin-bottom: 15px;
+    align-self: center;
+    float: inside;
+}
+.footer-library_copyright img {
+    max-height: 30px;
+
+}
+
+
+.text-center {
+    text-align: center;
+}
+
 @media screen and (max-width: 800px) {
     .column {
         width: 100%;
@@ -32,7 +56,7 @@
     color: white;
 }
 
-.footer-library a:visited {
+div.footer-library a:visited, div.footer-library a {
     text-decoration: none;
     color: #ffffff;
 }
@@ -76,11 +100,9 @@
 }
 
 .admin_header {
-    margin-left: -10pt;
     width: 100vw;
     background-color: #192947;
     padding-top: 5px;
-    padding-left: 10px;"
 }
 
 .iopn_header_omekas_s {

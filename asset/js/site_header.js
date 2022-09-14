@@ -1,75 +1,17 @@
+let library_header_logo= $("meta[name='asset:library_header_image']").attr("content");
+let iopn_header_logo = $("meta[name='asset:iopn_white_comp_trans']").attr("content");
+let header_html = `
+<div class="iopn_header_omekas_s" id="branding">
+    <map id="lib-shared-header-wordmark-online__map__small">
+        <area shape="rect" coords="0,0,15,20" href="https://illinois.edu" alt="Block I">
+        <area shape="rect" coords="25,0,200,20" href="https://www.library.illinois.edu" alt="University Library">
+    </map>
+    <img usemap="#lib-shared-header-wordmark-online__map__small" src="`+library_header_logo+`" alt="University of Illinois Library">
+    <a href="http://iopn.library.illinois.edu">
+        <img src="`+iopn_header_logo+`" class="iopn_img" alt="Illinois Open Publishing Network">
+    </a>
+    </div>`
 
-window.addEventListener("load", function () {
-
-
-    let brandingLogoHref = "https://library.illinois.edu";
-    let brandingLogoIopnHref = "https://iopn.library.illinois.edu";
-    let brandingLogoAlt = "University Library Logo";
-    let brandingLogoIopnAlt = "University Library Logo";
-
-
-
-    let firstArea = document.createElement("area");
-    let secondArea = document.createElement("area");
-
-    firstArea.setAttribute("shape", "rect");
-    firstArea.setAttribute("coords", "0,0,15,20");
-    firstArea.setAttribute("href", "https://illinois.edu");
-    firstArea.setAttribute("alt", "Block I");
-
-    secondArea.setAttribute("shape", "rect");
-    secondArea.setAttribute("coords", "25,0,200,20");
-    secondArea.setAttribute("href", "https://www.library.illinois.edu");
-    secondArea.setAttribute("alt", "University Library");
-
-    let libraryMap = document.createElement("map");
-    libraryMap.appendChild(firstArea);
-    libraryMap.appendChild(secondArea);
-    libraryMap.setAttribute("id", "lib-shared-header-wordmark-online__map__small")
-
-    let libraryImg = document.createElement('img');
-    libraryImg.setAttribute("usemap", "#lib-shared-header-wordmark-online__map__small");
-    libraryImg.setAttribute("src", brandingLogoSrc);
-    libraryImg.setAttribute("alt", "University of Illinois Library")
-
-    let brandingDiv = document.createElement('div');
-    brandingDiv.className = "iopn_header_omekas_s";
-    brandingDiv.id = "branding";
-
-
-    let iopnImg = document.createElement('img');
-    iopnImg.setAttribute("src", brandingLogoIopnScr);
-    iopnImg.className = 'iopn_img';
-    iopnImg.setAttribute("alt", "Illinois Open Publishing Network");
-
-    let iopnAnchor = document.createElement("a");
-    iopnAnchor.setAttribute("href", "http://iopn.library.illinois.edu");
-    iopnAnchor.appendChild(iopnImg);
-
-    brandingDiv.appendChild(libraryMap);
-    brandingDiv.appendChild(libraryImg);
-    brandingDiv.appendChild(iopnAnchor);
-
-    let body = document.getElementsByTagName('body')[0];
-
-    body.insertBefore(brandingDiv, body.childNodes[0]);
-
-
-
-
-
-
-
-}, false);
-
-
-// <div  class="iopn_header_common iopn_header_omekas_s">
-//     <img usemap="#lib-shared-header-wordmark-online__map__small" src="<?php echo $this->assetUrl('img/library.png') ?>"></img>
-//     <map name="lib-shared-header-wordmark-online__map__small">
-//     <area shape="rect" coords="0,0,15,20" href="https://illinois.edu" alt="Block I">
-//     <area shape="rect" coords="25,0,200,20" href="https://www.library.illinois.edu" alt="Illinois Library">
-//     </map>
-//     <a id="iopn_mark" href="https://iopn.library.illinois.edu">
-//     <img src="<?php echo $this->assetUrl('img/iopn.png') ?>" alt="Illinois Open Publishing Network">
-//     </a>
-//     </div>
+$(document).ready(function () {
+    $( header_html ).insertAfter( ".skip:first" );
+});

@@ -22,22 +22,13 @@ class Module extends AbstractModule
     public function addAsset(Event $event)
     {
         $view = $event->getTarget();
-        $view->headScript()->appendFile($view->assetUrl('js/branding.js', 'Branding'));
-
+        $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
+        $view->headMeta()->appendName('asset:library_header_image', $view->assetUrl('img/library_header_image.png', 'Branding'));
+        $view->headMeta()->appendName('asset:iopn_white_comp_trans', $view->assetUrl('img/iopn_white_comp_trans.png', 'Branding'));
+        $view->headMeta()->appendName('asset:Library_Vert', $view->assetUrl('img/Library_Vert.png', 'Branding'));
+        $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
         if ($this->getServiceLocator()->get('Omeka\Status')->isSiteRequest()) {
-            $librarySrc = $view->assetUrl('img/library_header_image.png', 'Branding');
-            $iopnSrc = $view->assetUrl('img/iopn_white_comp_trans.png', 'Branding');
-            $view->headScript()->captureStart() ?>
-            let brandingLogoSrc = "<?php echo $librarySrc; ?>";
-            let brandingLogoIopnScr = "<?php echo $iopnSrc; ?>";
-            <?php $view->headScript()->captureEnd();
-            $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
             $view->headScript()->appendFile($view->assetUrl('js/site_footer.js', 'Branding'));
-            $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
-        } else {
-            echo $view->partial('common/header');
-            $view->headScript()->prependFile($view->assetUrl('js/admin_header.js', 'Branding'));
-            $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
         }
     }
 
