@@ -1,4 +1,5 @@
-footer_html = `
+let footer_logo_src = $("meta[name='asset:Library_Vert']").attr("content");
+let footer_html = `
 <div class="footer-library">
     <div class="row">
         <div class="column footer-library_left" >
@@ -10,7 +11,7 @@ footer_html = `
 
         <div class="column ">
             <div class="footer-library_i-mark">
-                <img id="i-mark" usemap="#lib-shared-footer-wordmark-online__map__small" src="" alt="University of Illinois Library">
+                <img id="i-mark" usemap="#lib-shared-footer-wordmark-online__map__small" src="`+footer_logo_src +`" alt="University of Illinois Library">
 
                 <map name="lib-shared-footer-wordmark-online__map__small">
                     <area shape="rect" coords="0,0,200,40" href="https://illinois.edu" alt="Block I">
@@ -47,27 +48,7 @@ footer_html = `
 </div>
 `;
 
+$(document).ready(function () {
+    $( footer_html ).insertAfter( "footer:first" );
 
-
-
-window.addEventListener("load", function () {
-
-
-
-    let div  = document.createElement('div');
-    div.innerHTML = footer_html;
-    let body = document.getElementsByTagName("body")[0];
-    body.insertAdjacentElement("beforeend", div);}, false );
-
-window.addEventListener("load", function () {
-
-    let iMarkImg = document.getElementById("i-mark");
-    iMarkImg.setAttribute("src", iMarkSrc);
-    iMarkImg.setAttribute("alt", "Block I");
-    iMarkImg.setAttribute("title", "University of Illinois");
-
-    },false);
-
-    // let footer = document.getElementsByTagName("footer")[0];
-    // footer.remove();
-
+});
