@@ -11,5 +11,5 @@ let header_html = `
 </div>`
 
 $(document).ready(function () {
-    $( header_html ).insertAfter( ".skip:first" );
+    $( header_html ).insertAfter( "a:first" );
 });
