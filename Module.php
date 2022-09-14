@@ -27,9 +27,11 @@ class Module extends AbstractModule
         $view->headMeta()->appendName('asset:library_header_image', $view->assetUrl('img/library_header_image.png', 'Branding'));
         $view->headMeta()->appendName('asset:iopn_white_comp_trans', $view->assetUrl('img/iopn_white_comp_trans.png', 'Branding'));
         $view->headMeta()->appendName('asset:Library_Vert', $view->assetUrl('img/Library_Vert.png', 'Branding'));
-        $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
         if ($this->getServiceLocator()->get('Omeka\Status')->isSiteRequest()) {
+            $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
             $view->headScript()->appendFile($view->assetUrl('js/site_footer.js', 'Branding'));
+        } else {
+            $view->headScript()->appendFile($view->assetUrl('js/admin_header.js', 'Branding'));
         }
     }
 
