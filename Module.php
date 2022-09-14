@@ -2,8 +2,8 @@
 namespace Branding;
 
 use Omeka\Module\AbstractModule;
-use Zend\EventManager\Event;
-use Zend\EventManager\SharedEventManagerInterface;
+use Laminas\EventManager\Event;
+use Laminas\EventManager\SharedEventManagerInterface;
 
 class Module extends AbstractModule
 {
@@ -17,48 +17,28 @@ class Module extends AbstractModule
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
-
     }
 
-    public function addAsset(Event $event){
+    public function addAsset(Event $event)
+    {
         $view = $event->getTarget();
-        $view->headScript()->appendFile($view->assetUrl('js/branding.js', 'Branding'));
 
-
+        $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
+        $view->headMeta()->appendName('asset:library_header_image', $view->assetUrl('img/library_header_image.png', 'Branding'));
+        $view->headMeta()->appendName('asset:iopn_white_comp_trans', $view->assetUrl('img/iopn_white_comp_trans.png', 'Branding'));
+        $view->headMeta()->appendName('asset:Library_Vert', $view->assetUrl('img/Library_Vert.png', 'Branding'));
+        $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
         if ($this->getServiceLocator()->get('Omeka\Status')->isSiteRequest()) {
-
-            $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
-
             $view->headScript()->appendFile($view->assetUrl('js/site_footer.js', 'Branding'));
-            $view->headScript()->appendFile($view->assetUrl('js/site_header.js', 'Branding'));
-            echo $view->partial('common/header');
-
-
-
-
-        } else {
-            echo $view->partial('common/header');
-
-            $view->headScript()->prependFile($view->assetUrl('js/admin_header.js', 'Branding'));
-            $view->headLink()->appendStylesheet($view->assetUrl('css/branding.css', 'Branding'));
-
         }
-
-
-
-
-
-
     }
 
     public function attachListeners(SharedEventManagerInterface $sharedEventManager)
     {
         $sharedEventManager->attach(
-          '*',
-          'view.layout',
-          [$this, 'addAsset']
+            '*',
+            'view.layout',
+            [$this, 'addAsset']
         );
     }
-
-
 }
