@@ -12,12 +12,11 @@ let header_html = `
 
 $(document).ready(function () {
     //should be the skip nav link, but they aren't named constantly on front and back ends to target directly
-    if($("#user-bar" ).length !== 0) {
-        $( header_html ).insertBefore( "#user-bar" );
+
+    let freedom_header = $("header.main-header" )
+    if(freedom_header.length !== 0) {
+        freedom_header.prepend(header_html)
     } else {
         $( header_html ).insertAfter( "a[href='#content']" );
     }
-
-
-
 });
